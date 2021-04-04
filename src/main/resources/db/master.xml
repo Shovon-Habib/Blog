@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <include file="db/entity_photo.xml" relativeToChangelogFile="false"/>
+    <include file="db/entity_user.xml" relativeToChangelogFile="false"/>
+    <include file="db/entity_role.xml" relativeToChangelogFile="false"/>
+    <include file="db/entity_blog_post.xml" relativeToChangelogFile="false"/>
+    <include file="db/entity_like.xml" relativeToChangelogFile="false"/>
+    <include file="db/entity_comment.xml" relativeToChangelogFile="false"/>
+    <include file="db/entity_user_role.xml" relativeToChangelogFile="false"/>
+    <include file="db/entity_post_photo.xml" relativeToChangelogFile="false"/>
+
+    <include file="db/data/role_data.xml" relativeToChangelogFile="false"/>
+    <include file="db/data/user_data.xml" relativeToChangelogFile="false"/>
+    <include file="db/data/user_role_data.xml" relativeToChangelogFile="false"/>
+</databaseChangeLog>

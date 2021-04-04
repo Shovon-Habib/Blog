@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <!--username: admin-->
+    <!--password: 123456-->
+    <changeSet id="1617365518455" author="habib">
+        <sql>
+            INSERT INTO USER
+            (id, name, user_name, email, password, photo_id, domain_status, created_at, created_by, last_modified_at,
+            last_modified_by)
+            VALUES
+            ('098a0861-58e3-448f-a0f5-046970903d86', 'Admin', 'admin', 'admin@a.com',
+            '$2a$10$qrHiz4e7vqoFnCpy17jCMeZ4uq2BFoFhsoVvPkVn0.l366lRSbeNe', null, true,
+            CURRENT_TIMESTAMP(),
+            'system', CURRENT_TIMESTAMP(), 'system');
+        </sql>
+    </changeSet>
+</databaseChangeLog>

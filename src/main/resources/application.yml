@@ -1,0 +1,57 @@
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Blog
+  jackson:
+    time-zone: Asia/Dhaka
+    serialization:
+      indent-output: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:blog_db
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+      connectionTimeout: 300000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: h2
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.cache.use_query_cache: false
+      hibernate.jdbc.time_zone: Asia/Dhaka
+      hibernate.jdbc.batch_size: 50
+      hibernate.order_inserts: true
+      hibernate.order_updates: true
+      hibernate.jdbc.batch_versioned_data: true
+  liquibase:
+      change-log: 'classpath:/db/master.xml'
+
+logging:
+  level:
+    ROOT: INFO
+    org.hibernate.SQL: TRACE
+    org.springframework.web: INFO
+    com.dev.web: INFO
+
+jwt:
+  secret: blogdev

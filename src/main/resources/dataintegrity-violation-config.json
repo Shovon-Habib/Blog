@@ -1,0 +1,16 @@
+{
+  "uq_user_username": {
+    "table": "user",
+    "fields": [
+      "user_name"
+    ],
+    "message": "Duplicate Username!!"
+  },
+  "uq_user_email": {
+    "table": "user",
+    "fields": [
+      "email"
+    ],
+    "message": "Duplicate Email!!"
+  }
+}
